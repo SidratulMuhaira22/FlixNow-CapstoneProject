@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import hera.flixnow.made.submission.MyApplication
 import hera.flixnow.made.submission.R
 import hera.flixnow.made.submission.databinding.FragmentTvBinding
-import hera.flixnow.made.submission.ui.ViewModelFactory
+import hera.flixnow.made.submission.ui.FactoryViewModel
 import hera.flixnow.made.submission.ui.components.detail.ActivityDetailBase
 import hera.flixnow.made.core.data.Resource
 import hera.flixnow.made.core.domain.model.MovieTvModel
@@ -23,7 +23,7 @@ import javax.inject.Inject
 class TvBaseFragment : BaseFragment<FragmentTvBinding>({ FragmentTvBinding.inflate(it) }) {
 
     @Inject
-    lateinit var factory: ViewModelFactory
+    lateinit var factory: FactoryViewModel
 
     private val viewModel: ViewModelTv by viewModels { factory }
     private val adapter by lazy { AdapterTvBase() }

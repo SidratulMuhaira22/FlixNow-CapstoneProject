@@ -7,7 +7,7 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import hera.flixnow.made.submission.MyApplication
 import hera.flixnow.made.submission.databinding.ActivityDetailBinding
-import hera.flixnow.made.submission.ui.ViewModelFactory
+import hera.flixnow.made.submission.ui.FactoryViewModel
 import hera.flixnow.made.core.R
 import hera.flixnow.made.core.domain.model.MovieTvModel
 import hera.flixnow.made.core.ui.base.ActivityBase
@@ -18,7 +18,7 @@ import javax.inject.Inject
 class ActivityDetailBase : ActivityBase<ActivityDetailBinding>({ ActivityDetailBinding.inflate(it) }) {
 
     @Inject
-    lateinit var factory: ViewModelFactory
+    lateinit var factory: FactoryViewModel
 
     private val viewModel: ViewModelDetail by viewModels { factory }
 

@@ -3,10 +3,10 @@ package hera.flixnow.made.favorites.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import hera.flixnow.made.core.domain.model.MovieTvModel
-import hera.flixnow.made.core.domain.usecase.UseCaseMovieTv
+import hera.flixnow.made.core.domain.usecase.MovieTvUseCase
 import javax.inject.Inject
 
-class ViewModelFavorite @Inject constructor(private val useCase: UseCaseMovieTv?) : ViewModel() {
+class ViewModelFavorite @Inject constructor(private val useCase: MovieTvUseCase?) : ViewModel() {
     val favoriteMovies = useCase?.getFavoriteMovies()
     val favoriteTvShows = useCase?.getFavoriteTvShows()
 

@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
-import hera.flixnow.made.submission.ui.ViewModelFactory
+import hera.flixnow.made.submission.ui.FactoryViewModel
 import hera.flixnow.made.submission.ui.components.detail.ViewModelDetail
 import hera.flixnow.made.submission.ui.components.movie.ViewModelMovie
 import hera.flixnow.made.submission.ui.components.tv.ViewModelTv
@@ -15,7 +15,7 @@ import hera.flixnow.made.submission.ui.components.tv.ViewModelTv
 abstract class MyViewModelModule {
 
     @Binds
-    abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
+    abstract fun bindViewModelFactory(factory: FactoryViewModel): ViewModelProvider.Factory
 
     @Binds
     @IntoMap

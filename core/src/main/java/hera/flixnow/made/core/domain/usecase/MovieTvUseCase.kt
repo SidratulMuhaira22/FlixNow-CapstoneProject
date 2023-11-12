@@ -6,7 +6,7 @@ import hera.flixnow.made.core.data.Resource
 import hera.flixnow.made.core.domain.model.MovieTvModel
 import kotlinx.coroutines.flow.Flow
 
-interface UseCaseMovieTv {
+interface MovieTvUseCase {
     fun getMovies(): Flow<Resource<List<MovieTvModel>>>
     fun getTvShows(): Flow<Resource<List<MovieTvModel>>>
     fun getFavoriteMovies(): LiveData<PagedList<MovieTvModel>>

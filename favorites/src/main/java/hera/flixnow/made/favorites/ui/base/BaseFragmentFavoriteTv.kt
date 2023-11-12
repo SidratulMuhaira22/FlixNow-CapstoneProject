@@ -6,7 +6,7 @@ import androidx.fragment.app.viewModels
 import androidx.paging.PagedList
 import com.google.android.material.snackbar.Snackbar
 import hera.flixnow.made.submission.R
-import hera.flixnow.made.submission.ui.ViewModelFactory
+import hera.flixnow.made.submission.ui.FactoryViewModel
 import hera.flixnow.made.core.di.ComponentCore
 import hera.flixnow.made.core.di.DaggerComponentCore
 import hera.flixnow.made.core.domain.model.MovieTvModel
@@ -25,7 +25,7 @@ import javax.inject.Inject
 class BaseFragmentFavoriteTv : BaseFragment<FragmentFavoriteTvBinding>({ FragmentFavoriteTvBinding.inflate(it) }) {
 
     @Inject
-    lateinit var factory: ViewModelFactory
+    lateinit var factory: FactoryViewModel
 
     private val componentCore: ComponentCore by lazy {
         DaggerComponentCore.factory().create(requireActivity())

@@ -6,7 +6,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 import hera.flixnow.made.submission.di.MyViewModelKey
-import hera.flixnow.made.submission.ui.ViewModelFactory
+import hera.flixnow.made.submission.ui.FactoryViewModel
 import hera.flixnow.made.favorites.ui.ViewModelFavorite
 
 @Suppress("unused")
@@ -14,7 +14,7 @@ import hera.flixnow.made.favorites.ui.ViewModelFavorite
 abstract class ViewModelModuleFavorite {
 
     @Binds
-    abstract fun bindFavoriteViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
+    abstract fun bindFavoriteViewModelFactory(factory: FactoryViewModel): ViewModelProvider.Factory
 
     @Binds
     @IntoMap

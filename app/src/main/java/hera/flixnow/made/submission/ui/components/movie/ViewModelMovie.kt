@@ -3,13 +3,13 @@ package hera.flixnow.made.submission.ui.components.movie
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import hera.flixnow.made.core.domain.model.MovieTvModel
-import hera.flixnow.made.core.domain.usecase.UseCaseMovieTv
+import hera.flixnow.made.core.domain.usecase.MovieTvUseCase
 import kotlinx.coroutines.channels.BroadcastChannel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 
-class ViewModelMovie @Inject constructor(private val useCase: UseCaseMovieTv?) : ViewModel() {
+class ViewModelMovie @Inject constructor(private val useCase: MovieTvUseCase?) : ViewModel() {
 
   val movies = useCase?.getMovies()?.asLiveData()
 

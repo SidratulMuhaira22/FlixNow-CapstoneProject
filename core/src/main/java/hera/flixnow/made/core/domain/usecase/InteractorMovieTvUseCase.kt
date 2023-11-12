@@ -8,8 +8,8 @@ import hera.flixnow.made.core.domain.repository.RepositoryIMovieTv
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class InteractorMovieTv @Inject constructor(private val tourismRepository: RepositoryIMovieTv):
-    UseCaseMovieTv {
+class InteractorMovieTvUseCase @Inject constructor(private val tourismRepository: RepositoryIMovieTv):
+    MovieTvUseCase {
 
     override fun getMovies(): Flow<Resource<List<MovieTvModel>>> = tourismRepository.getMovies()
 
